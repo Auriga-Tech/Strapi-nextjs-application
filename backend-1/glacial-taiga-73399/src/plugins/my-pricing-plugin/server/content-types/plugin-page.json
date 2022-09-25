@@ -1,0 +1,117 @@
+{
+    "kind": "collectionType",
+    "collectionName": "plugin_pages",
+    "info": {
+      "singularName": "plugin-page",
+      "pluralName": "plugin-pages",
+      "displayName": "PluginPage",
+      "description": ""
+    },
+    "options": {
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "title": {
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "type": "string"
+      },
+      "image": {
+        "type": "media",
+        "multiple": false,
+        "required": false,
+        "allowedTypes": [
+          "images"
+        ],
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        }
+      },
+      "content": {
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "type": "richtext",
+        "required": true
+      },
+      "slug": {
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "type": "uid",
+        "targetField": "title"
+      },
+      "blocks": {
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "type": "dynamiczone",
+        "components": [
+          "blocks.cta",
+          "blocks.cta-command-line",
+          "blocks.related-blogs"
+        ]
+      },
+      "category": {
+        "type": "relation",
+        "relation": "manyToOne",
+        "target": "api::category.category",
+        "inversedBy": "blogs"
+      },
+      "publish_at": {
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "type": "date"
+      },
+      "isReady": {
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "type": "boolean",
+        "default": false,
+        "required": true
+      },
+      "author": {
+        "type": "relation",
+        "relation": "manyToOne",
+        "target": "plugin::users-permissions.user",
+        "inversedBy": "blogs"
+      },
+      "comment": {
+        "pluginOptions": {
+          "i18n": {
+            "localized": false
+          }
+        },
+        "type": "text",
+        "private": true
+      },
+      "seo": {
+        "type": "component",
+        "repeatable": false,
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "component": "shared.seo"
+      }
+    }
+  }
+  

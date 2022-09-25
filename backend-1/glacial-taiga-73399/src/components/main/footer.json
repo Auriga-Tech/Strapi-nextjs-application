@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_main_footers",
+  "info": {
+    "displayName": "Footer",
+    "icon": "arrow-down"
+  },
+  "options": {},
+  "attributes": {
+    "socialNetworks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.social-network"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

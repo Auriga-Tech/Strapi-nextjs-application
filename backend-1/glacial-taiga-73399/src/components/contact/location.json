@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_contact_locations",
+  "info": {
+    "displayName": "Location",
+    "icon": "search-location",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "complete_Address": {
+      "type": "text",
+      "required": true,
+      "minLength": 5
+    },
+    "contact_no": {
+      "type": "string"
+    },
+    "location_icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "contact_icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "url": {
+      "type": "text"
+    }
+  }
+}
